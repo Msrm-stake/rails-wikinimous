@@ -1,0 +1,41 @@
+<div style="padding: 50px 300px;">
+  <div style="margin-bottom: 20px;">
+    <h2>Edit Article</h2>
+    <h3>Feel free to edit and update the current article</h3>
+  </div>
+
+  <%= form_with model: @article do |f| %>
+    <div>
+      <%= f.label :title, style: 'font-size: 20px;
+    font-family: arial;' %>
+      <%= f.text_field :title, style: 'width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+    border-color: gray;
+    border-style: solid; margin-bottom: 20px;' %>
+    </div>
+    <div>
+      <%= f.label :content, style: 'font-size: 20px;
+    font-family: arial;' %>
+      <%= f.text_area :content, style: 'width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+    border-color: gray;
+    border-style: solid; margin-bottom: 20px;' %>
+    </div>
+    <div 
+      style="display: flex; justify-content: center; flex-direction: column;"><%= f.submit 'Submit', style: 'border-radius: 5px; background-color: #0dc3ea;
+      border-style: none;
+      color: white;' %>
+    </div>
+
+    <div style="display: flex; justify-content: center; flex-direction: column; margin-top: 5px; text-align: center;">
+      <%= link_to 'All articles', articles_path, style: 'border-radius: 5px;
+    background-color: #0dc3ea;
+    border-style: none;
+    color: white; text-decoration: none;' %>
+    </div>
+
+    
+  <% end %>
+</div>

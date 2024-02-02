@@ -1,0 +1,24 @@
+<div style="padding: 50px 300px; font-size: 20px">
+  <div style="display: flex;
+    flex-direction: row;
+    justify-content: space-between;">
+    <div>
+      <h3><%= @article.title %></h3>
+    </div>
+    <div>
+      <%= link_to 'Edit', edit_article_path(@article), style: 'text-decoration: none;
+    background-color: #0dc3ea; padding: 5px 10px; font-size: 15px; color: white;
+    border-radius: 5px;' %>
+      <%= link_to 'Delete', article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete?"}, style: 'text-decoration: none;
+    background-color: #0dc3ea; padding: 5px 10px; font-size: 15px; color: white;
+    border-radius: 5px;' %>
+      <%= link_to 'All articles', articles_path, style: 'text-decoration: none;
+    background-color: #0dc3ea; padding: 5px 10px; font-size: 15px; color: white;
+    border-radius: 5px;' %>
+    </div>
+  </div>
+  
+  <p><%= @article.content %></p>
+</div>
+
+

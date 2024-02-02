@@ -1,0 +1,13 @@
+<div class="container" style="padding: 10px 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 20px;
+    font-family: arial; margin-top: 20px">
+  <% @articles.each do |article| %>
+    <h3 style="margin-bottom: 10px; text-decoration: none;
+    color: #0dc3ea;"><%= link_to article.title, article_path(article), style: 'margin-bottom: 10px; text-decoration: none;
+    color: #0dc3ea;' %></h3>
+    <p style="margin-bottom: 10px;"><%= article.content %></p>
+  <% end %>
+</div>
